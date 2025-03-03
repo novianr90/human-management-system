@@ -7,6 +7,7 @@ import (
 )
 
 type AD_Reference struct {
+	gorm.Model
 	AD_Reference_ID uint           `gorm:"primaryKey"`
 	ReferenceName   string         `gorm:"type:varchar(100);uniqueIndex;not null"`
 	ReferenceValue  string         `gorm:"type:varchar(100);not null"`
